@@ -12,18 +12,27 @@ idf.py build
 in the root directory
 
 Send to the board with
-idf.py flash
+
+  idf.py flash
 
 View debug information with
-idf.py monitor
+
+  idf.py monitor
 
 The pack will auto connect to the hub's WiFi with
-SSID: SyncSymphonyHub
-password: syncingandswimming
+
+  SSID: SyncSymphonyHub
+  
+  password: syncingandswimming
+
 
 NOTE the following files in esp-idf need to be modified: 
-sntp.h and add void sntp_request(void *) 
-sntp.c and change static void sntp_request(void *arg) to void sntp_request(void *arg)  
-sntp.c has static void sntp_request(void *arg) in there twice 
+
+  sntp.h and add void sntp_request(void *) 
+
+  sntp.c and change static void sntp_request(void *arg) to void sntp_request(void *arg)  
+
+  sntp.c has static void sntp_request(void *arg) in there twice 
+
 follow as per https://stackoverflow.com/questions/56025619/how-to-resync-time-from-ntp-server-in-esp-idf
 
